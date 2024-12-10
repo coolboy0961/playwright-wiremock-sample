@@ -1,0 +1,2061 @@
+2024-12-10 16:48:50.099 Verbose logging enabled
+2024-12-10 16:48:51.102 Verbose logging enabled
+ /$$      /$$ /$$                     /$$      /$$                     /$$      
+| $$  /$ | $$|__/                    | $$$    /$$$                    | $$      
+| $$ /$$$| $$ /$$  /$$$$$$   /$$$$$$ | $$$$  /$$$$  /$$$$$$   /$$$$$$$| $$   /$$
+| $$/$$ $$ $$| $$ /$$__  $$ /$$__  $$| $$ $$/$$ $$ /$$__  $$ /$$_____/| $$  /$$/
+| $$$$_  $$$$| $$| $$  \__/| $$$$$$$$| $$  $$$| $$| $$  \ $$| $$      | $$$$$$/ 
+| $$$/ \  $$$| $$| $$      | $$_____/| $$\  $ | $$| $$  | $$| $$      | $$_  $$ 
+| $$/   \  $$| $$| $$      |  $$$$$$$| $$ \/  | $$|  $$$$$$/|  $$$$$$$| $$ \  $$
+|__/     \__/|__/|__/       \_______/|__/     |__/ \______/  \_______/|__/  \__/
+
+port:                         8091
+enable-browser-proxying:      false
+disable-banner:               false
+no-request-journal:           false
+verbose:                      true
+
+2024-12-10 16:48:55.546 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:48:55.573 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:48:55.576 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:48:55.745 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [f805f6c0-7a9f-40a5-b516-026aa63b6ee2]
+
+2024-12-10 16:49:09.281 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:49:09.311 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:09.311 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:09.315 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [2ca4e565-8558-478a-aafd-2289b2e9ad78]
+
+2024-12-10 16:49:35.642 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:49:35.665 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:35.665 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:35.666 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [a294df69-ae2b-4b4c-bc6f-439f2e228842]
+
+2024-12-10 16:49:39.799 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:49:39.821 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:39.822 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:39.828 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [dacca08b-bda1-4c0e-bea2-f1b7c79b1e44]
+
+2024-12-10 16:49:46.650 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:46.650 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:46.654 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [b4184e11-dd0e-403d-953b-6c6f4693ae08]
+
+2024-12-10 16:49:49.034 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:49.034 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:49.047 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [eec6ec1c-5347-4a7c-9cff-9e9f035f0685]
+
+2024-12-10 16:49:50.928 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:50.928 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:49:50.934 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [d91b4d43-944b-43c4-900c-0d041c74659b]
+
+2024-12-10 16:50:39.210 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:50:39.228 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:50:39.228 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:50:39.231 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [e84e2a0a-4b90-45f9-88da-7de3e9e55198]
+
+2024-12-10 16:50:46.744 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:50:46.756 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:50:46.756 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:50:46.761 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [4468ca68-4f93-43db-b486-c01559a49f47]
+
+2024-12-10 16:51:01.095 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:51:01.122 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:01.122 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:01.123 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [7e431109-bb05-4cb9-9fed-7c3dc91a826a]
+
+2024-12-10 16:51:17.386 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:17.386 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:17.389 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [1efa50c9-3d1f-4182-9379-b1775d898608]
+
+2024-12-10 16:51:17.407 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:51:19.473 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:19.473 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:19.483 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [27086daf-527f-4678-8192-8f02857f2751]
+
+2024-12-10 16:51:27.863 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:27.863 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:27.870 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [5a17a54f-ddff-447f-bc6e-d1083383e480]
+
+2024-12-10 16:51:27.878 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:51:33.890 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:33.889 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:33.891 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [c5412ec1-dcab-4646-9182-208aaa9e80e0]
+
+2024-12-10 16:51:54.242 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:51:54.243 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [35a08186-3b99-4f86-af6d-e08a7c715578]
+
+2024-12-10 16:51:54.255 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:52:39.784 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [b27fdb37-603e-49be-88d0-8300b9c9fcc4]
+
+2024-12-10 16:52:39.780 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:52:39.780 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:53:00.683 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:53:00.699 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [0c27fe72-efcb-4c29-9265-a1d3686ef4c6]
+
+2024-12-10 16:53:00.706 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:53:02.854 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:53:02.869 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [ad9707cf-9e73-4ded-af3d-62ddd8331617]
+
+2024-12-10 16:53:02.877 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:53:04.854 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:53:04.868 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [9a63e887-ea71-4ebe-9d6c-f7ff6e313777]
+
+2024-12-10 16:53:04.875 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:53:06.687 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:53:06.696 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [022bee0c-e5fc-43e9-a04b-c2b67212a49e]
+
+2024-12-10 16:53:06.703 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:53:40.810 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:53:40.810 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:53:40.816 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [84c3873e-456e-4814-8ed0-976bac6cefc2]
+
+2024-12-10 16:53:45.684 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [252]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"body":"{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:53:45.684 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:53:45.695 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"message\":\"Hello, WireMock! From playwright!\",\"status\":\"success\",\"data\":{\"id\":123,\"name\":\"Sample Data\"}}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [262574e6-9e03-4c60-a1be-29736fb3f246]
+
+2024-12-10 16:53:45.715 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:54:08.500 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:54:08.534 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [de155398-f9c7-47bf-80e5-8f21c8c81fd2]
+
+2024-12-10 16:54:08.543 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:54:35.644 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:54:35.660 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [581324eb-8f08-4da9-9aea-fac713487992]
+
+2024-12-10 16:54:35.669 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:54:43.908 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:54:43.915 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [a260dbd6-cc1b-4f53-bed5-07cbe33d8be8]
+
+2024-12-10 16:55:23.832 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:55:23.834 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [24ea89b4-b22b-4658-be93-db0fa4332df3]
+
+2024-12-10 16:55:23.850 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:59:51.191 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:59:51.193 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [9b707df8-71ad-49af-a12a-9f2839a9759b]
+
+2024-12-10 16:59:55.585 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:59:55.586 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [742b0be2-bd5d-4805-b717-4b4fe14b18c6]
+
+2024-12-10 16:59:55.597 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 16:59:58.326 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 16:59:58.333 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [dd9aefe9-e552-425a-a53f-35cb93badcca]
+
+2024-12-10 17:00:02.558 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:00:02.563 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [0918be61-cb6a-4198-b657-47252e2cfa30]
+
+2024-12-10 17:00:02.584 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 17:00:12.171 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:00:12.213 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [7bdad6b1-af89-4e37-a8be-72a20a74ba5f]
+
+2024-12-10 17:00:12.230 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 17:00:14.255 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:00:14.267 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [5232bf7b-7d43-4bde-bc92-793f0726b2f0]
+
+2024-12-10 17:00:14.276 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 17:00:16.372 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:00:16.382 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [460156ca-fb36-4673-ba5e-0f278f49c2c4]
+
+2024-12-10 17:00:16.389 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 17:00:18.374 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:00:18.383 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [92b1c73e-e854-445e-b909-abc3aa84959e]
+
+2024-12-10 17:00:18.393 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 17:00:20.779 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:00:20.789 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [6dac57e9-6cb9-4591-96c2-e625ccbbf665]
+
+2024-12-10 17:00:20.798 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 17:00:25.165 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:00:25.176 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [e7e72406-d5cc-46aa-9832-93351e2a1345]
+
+2024-12-10 17:00:25.189 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 17:00:27.278 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:00:27.294 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [ac79be51-adaa-4393-96cf-12166c2c1983]
+
+2024-12-10 17:00:27.311 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 17:04:38.173 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:04:38.188 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [1abac075-5a4b-4d55-b5af-0a48615f4861]
+
+2024-12-10 17:04:38.203 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 17:04:40.183 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:04:40.197 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [3154952d-519b-4055-8e05-5a11146886a5]
+
+2024-12-10 17:04:40.213 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+2024-12-10 17:04:42.546 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [163]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+{"request":{"method":"GET","url":"/api/example"},"response":{"status":200,"bodyFileName":"e2e/sample-response.json","headers":{"Content-Type":"application/json"}}}
+
+2024-12-10 17:04:42.565 Request received:
+[0:0:0:0:0:0:0:1] - GET /api/example
+
+Accept: [application/json, text/plain, */*]
+User-Agent: [axios/1.7.9]
+Accept-Encoding: [gzip, compress, deflate, br]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "bodyFileName" : "e2e/sample-response.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [c9b9d09e-8ce2-4a55-886b-68e9ff91c8b8]
+
+2024-12-10 17:04:42.574 Admin request received:
+[0:0:0:0:0:0:0:1] - POST /mappings/reset
+
+Content-Type: [application/json]
+Accept: [*/*]
+Content-Length: [0]
+User-Agent: [node-fetch/1.0 (+https://github.com/bitinn/node-fetch)]
+Accept-Encoding: [gzip,deflate]
+Host: [localhost:8091]
+Connection: [keep-alive]
+
+
