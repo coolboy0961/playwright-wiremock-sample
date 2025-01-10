@@ -1,8 +1,10 @@
 import { test, expect, type Page } from '@playwright/test';
 import { WrapperPage } from './pages/wrapper-page';
 
+const baseUrl = 'https://demo.playwright.dev';
+
 test.beforeEach(async ({ page }) => {
-  const wrapperPage = new WrapperPage(page);
+  const wrapperPage = new WrapperPage(page, baseUrl);
   await wrapperPage.goto();
 });
 

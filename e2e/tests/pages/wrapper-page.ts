@@ -5,9 +5,9 @@ export class WrapperPage {
   readonly page: Page;
   readonly todoPage: TodoPage;
 
-  constructor(page: Page) {
+  constructor(page: Page, baseUrl: string) {
     this.page = page;
-    this.todoPage = new TodoPage(page);
+    this.todoPage = new TodoPage(page, baseUrl);
   }
 
   async goto() {
