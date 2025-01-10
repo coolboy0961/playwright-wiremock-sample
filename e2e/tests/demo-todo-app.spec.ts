@@ -1,7 +1,9 @@
 import { test, expect, type Page } from '@playwright/test';
+import { WrapperPage } from './pages/wrapper-page';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('https://demo.playwright.dev/todomvc');
+  const wrapperPage = new WrapperPage(page);
+  await wrapperPage.goto();
 });
 
 const TODO_ITEMS = [
