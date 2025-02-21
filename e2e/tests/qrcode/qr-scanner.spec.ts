@@ -18,7 +18,6 @@ test.use({
       "--use-file-for-fake-video-capture=tests/qrcode/qrcode.mjpeg",
     ],
   },
-  permissions: ['camera'],
 });
 
 test.describe("Scan", () => {
