@@ -21,7 +21,7 @@ test.use({
 });
 
 test.describe("Scan", () => {
-  test.only("QRコードスキャナーが表示されていることを確認", async ({
+  test.only("QRコードスキャナーでスキャンしたテキストが表示されているか確認", async ({
     page,
   }) => {
     // Arrange
