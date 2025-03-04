@@ -33,6 +33,8 @@ test.describe("Scan", () => {
     // Assert
     // 「QRコードスキャナー」のテキストが表示されているか確認
     await expect(page.getByText("QRコードスキャナー")).toBeVisible();
+    const expectedCameraCountText = "利用可能なカメラデバイスの数: 1";
+    await expect(page.getByText(expectedCameraCountText)).toBeVisible();
     // スキャンしたテキストが表示されているか確認
     await expect(page.getByText(expectedScanedText)).toBeVisible({ timeout: 30000 });
   });
