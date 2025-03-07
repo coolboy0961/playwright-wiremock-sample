@@ -20,8 +20,8 @@ test.use({
   },
 });
 
-test.describe("Scan", () => {
-  test.only("QRコードスキャナーでスキャンしたテキストが表示されているか確認", async ({
+test.describe.only("Scan", () => {
+  test("QRコードスキャナーでスキャンしたテキストが表示されているか確認", async ({
     page,
   }) => {
     // Arrange
@@ -37,5 +37,30 @@ test.describe("Scan", () => {
     await expect(page.getByText(expectedCameraCountText)).toBeVisible();
     // スキャンしたテキストが表示されているか確認
     await expect(page.getByText(expectedScanedText)).toBeVisible({ timeout: 30000 });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    // APIレスポンスをモック
+    await page.route('**/api/example', async route => {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ message: 'Hello, Wiremock!' })
+      });
+    });
+
+    // Act
+    // 自動的にスキャンが始まるため、スキャン完了まで待機
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    // APIレスポンスが表示されているか確認
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText('Hello, Wiremock!', {
+      timeout: 10000
+    });
   });
 });
