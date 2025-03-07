@@ -1,17 +1,8 @@
 import { test, expect, type Page } from "@playwright/test";
 import { WrapperPage } from "../pages/wrapper-page";
 import { ApiRouter } from "../../utils/api-router";
-
-const baseUrl = "http://localhost:4200";
-
-test.beforeEach(async ({ page }, testInfo) => {
-  const wrapperPage = new WrapperPage(page, baseUrl);
-  await wrapperPage.goto();
-
-  // ワーカー番号に基づいてAPIリクエストをリダイレクト
-  // testInfo.workerIndexは0から始まるため、+1して1から始まるインデックスに変換
-  await ApiRouter.setupApiRedirect(page, testInfo.workerIndex + 1);
-});
+import { WireMockRestClient } from "wiremock-rest-client";
+import { WireMockClientUtil } from "../../utils/wiremock-client";
 
 test.use({
   launchOptions: {
@@ -26,10 +17,26 @@ test.use({
 });
 
 test.describe.only("Scan", () => {
+  const baseUrl = "http://localhost:4200";
+  let wireMock: WireMockRestClient;
+  test.beforeEach(async ({ page }, testInfo) => {
+    // ワーカー番号に基づいてAPIリクエストをリダイレクト
+    // testInfo.workerIndexは0から始まるため、+1して1から始まるインデックスに変換
+    const workerIndex = testInfo.workerIndex + 1;
+    await ApiRouter.setupApiRedirect(page, workerIndex);
+  
+    // WireMockクライアントを生成
+    wireMock = WireMockClientUtil.createClient(workerIndex);
+    
+    const wrapperPage = new WrapperPage(page, baseUrl);
+    await wrapperPage.goto();
+  });
+  
   test("QRコードスキャナーでスキャンしたテキストが表示されているか確認", async ({
     page,
   }) => {
     // Arrange
+
     const expectedScanedText = "https://www.google.com"
 
     // Act
@@ -46,7 +53,7 @@ test.describe.only("Scan", () => {
 
   test("QRコードスキャン後にAPIレスポンスにHello, Wiremock1!が表示される", async ({
     page,
-  }) => {
+  }, testInfo) => {
     // Arrange
     const expectedApiResponse = "Hello, WireMock!";
 
