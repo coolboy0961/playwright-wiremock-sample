@@ -1,0 +1,8 @@
+{
+  "message": "Hello, WireMock8! From playwright!",
+  "status": "success",
+  "data": {
+    "id": 123,
+    "name": "Sample Data"
+  }
+} 

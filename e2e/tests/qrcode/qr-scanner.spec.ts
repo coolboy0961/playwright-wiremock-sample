@@ -19,6 +19,7 @@ test.use({
 test.describe.only("Scan", () => {
   const baseUrl = "http://localhost:4200";
   let wireMock: WireMockRestClient;
+
   test.beforeEach(async ({ page }, testInfo) => {
     // ワーカー番号に基づいてAPIリクエストをリダイレクト
     // testInfo.workerIndexは0から始まるため、+1して1から始まるインデックスに変換
@@ -27,11 +28,12 @@ test.describe.only("Scan", () => {
   
     // WireMockクライアントを生成
     wireMock = WireMockClientUtil.createClient(workerIndex);
+    await wireMock.mappings.resetAllMappings();
     
     const wrapperPage = new WrapperPage(page, baseUrl);
     await wrapperPage.goto();
   });
-  
+
   test("QRコードスキャナーでスキャンしたテキストが表示されているか確認", async ({
     page,
   }) => {
@@ -55,7 +57,8 @@ test.describe.only("Scan", () => {
     page,
   }, testInfo) => {
     // Arrange
-    const expectedApiResponse = "Hello, WireMock!";
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping1.json')
+    const expectedApiResponse = "Hello, WireMock1!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
@@ -73,7 +76,8 @@ test.describe.only("Scan", () => {
     page,
   }) => {
     // Arrange
-    const expectedApiResponse = "Hello, WireMock!";
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping2.json')
+    const expectedApiResponse = "Hello, WireMock2!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
@@ -91,7 +95,8 @@ test.describe.only("Scan", () => {
     page,
   }) => {
     // Arrange
-    const expectedApiResponse = "Hello, WireMock!";
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping3.json')
+    const expectedApiResponse = "Hello, WireMock3!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
@@ -109,7 +114,8 @@ test.describe.only("Scan", () => {
     page,
   }) => {
     // Arrange
-    const expectedApiResponse = "Hello, WireMock!";
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping4.json')
+    const expectedApiResponse = "Hello, WireMock4!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
@@ -127,7 +133,8 @@ test.describe.only("Scan", () => {
     page,
   }) => {
     // Arrange
-    const expectedApiResponse = "Hello, WireMock!";
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping5.json')
+    const expectedApiResponse = "Hello, WireMock5!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
@@ -145,7 +152,8 @@ test.describe.only("Scan", () => {
     page,
   }) => {
     // Arrange
-    const expectedApiResponse = "Hello, WireMock!";
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping6.json')
+    const expectedApiResponse = "Hello, WireMock6!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
@@ -163,7 +171,8 @@ test.describe.only("Scan", () => {
     page,
   }) => {
     // Arrange
-    const expectedApiResponse = "Hello, WireMock!";
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping7.json')
+    const expectedApiResponse = "Hello, WireMock7!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
@@ -181,7 +190,8 @@ test.describe.only("Scan", () => {
     page,
   }) => {
     // Arrange
-    const expectedApiResponse = "Hello, WireMock!";
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping8.json')
+    const expectedApiResponse = "Hello, WireMock8!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
@@ -199,7 +209,8 @@ test.describe.only("Scan", () => {
     page,
   }) => {
     // Arrange
-    const expectedApiResponse = "Hello, WireMock!";
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping9.json')
+    const expectedApiResponse = "Hello, WireMock9!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
@@ -217,7 +228,8 @@ test.describe.only("Scan", () => {
     page,
   }) => {
     // Arrange
-    const expectedApiResponse = "Hello, WireMock!";
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping10.json')  
+    const expectedApiResponse = "Hello, WireMock10!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
