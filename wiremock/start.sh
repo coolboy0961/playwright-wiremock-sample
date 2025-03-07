@@ -31,7 +31,7 @@ if ! [ -e wiremock-standalone.jar ]; then
 fi
 
 # Start WireMock in standalone mode (in a background process) and save its output to a log
-java -jar wiremock-standalone.jar --port $port --root-dir $instance --verbose &> $logFile 2>&1 &
+java -jar wiremock-standalone.jar --port $port --root-dir local --verbose &> $logFile 2>&1 &
 echo $! > $pidFile
 
 echo WireMock $instance started on port $port

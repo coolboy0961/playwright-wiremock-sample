@@ -1,11 +1,16 @@
 import { test, expect, type Page } from "@playwright/test";
 import { WrapperPage } from "../pages/wrapper-page";
+import { ApiRouter } from "../../utils/api-router";
 
 const baseUrl = "http://localhost:4200";
 
-test.beforeEach(async ({ page }) => {
+test.beforeEach(async ({ page }, testInfo) => {
   const wrapperPage = new WrapperPage(page, baseUrl);
   await wrapperPage.goto();
+
+  // ワーカー番号に基づいてAPIリクエストをリダイレクト
+  // testInfo.workerIndexは0から始まるため、+1して1から始まるインデックスに変換
+  await ApiRouter.setupApiRedirect(page, testInfo.workerIndex + 1);
 });
 
 test.use({
@@ -39,18 +44,11 @@ test.describe.only("Scan", () => {
     await expect(page.getByText(expectedScanedText)).toBeVisible({ timeout: 30000 });
   });
 
-  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock!が表示される", async ({
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock1!が表示される", async ({
     page,
   }) => {
     // Arrange
-    // APIレスポンスをモック
-    await page.route('**/api/example', async route => {
-      await route.fulfill({
-        status: 200,
-        contentType: 'application/json',
-        body: JSON.stringify({ message: 'Hello, Wiremock!' })
-      });
-    });
+    const expectedApiResponse = "Hello, WireMock!";
 
     // Act
     // 自動的にスキャンが始まるため、スキャン完了まで待機
@@ -59,7 +57,169 @@ test.describe.only("Scan", () => {
     // Assert
     // APIレスポンスが表示されているか確認
     await expect(page.locator('.api-response pre')).toBeVisible();
-    await expect(page.locator('.api-response pre')).toContainText('Hello, Wiremock!', {
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock2!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    const expectedApiResponse = "Hello, WireMock!";
+
+    // Act
+    // 自動的にスキャンが始まるため、スキャン完了まで待機
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    // APIレスポンスが表示されているか確認
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock3!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    const expectedApiResponse = "Hello, WireMock!";
+
+    // Act
+    // 自動的にスキャンが始まるため、スキャン完了まで待機
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    // APIレスポンスが表示されているか確認
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock4!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    const expectedApiResponse = "Hello, WireMock!";
+
+    // Act
+    // 自動的にスキャンが始まるため、スキャン完了まで待機
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    // APIレスポンスが表示されているか確認
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock5!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    const expectedApiResponse = "Hello, WireMock!";
+
+    // Act
+    // 自動的にスキャンが始まるため、スキャン完了まで待機
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    // APIレスポンスが表示されているか確認
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock6!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    const expectedApiResponse = "Hello, WireMock!";
+
+    // Act
+    // 自動的にスキャンが始まるため、スキャン完了まで待機
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    // APIレスポンスが表示されているか確認
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock7!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    const expectedApiResponse = "Hello, WireMock!";
+
+    // Act
+    // 自動的にスキャンが始まるため、スキャン完了まで待機
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    // APIレスポンスが表示されているか確認
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock8!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    const expectedApiResponse = "Hello, WireMock!";
+
+    // Act
+    // 自動的にスキャンが始まるため、スキャン完了まで待機
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    // APIレスポンスが表示されているか確認
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock9!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    const expectedApiResponse = "Hello, WireMock!";
+
+    // Act
+    // 自動的にスキャンが始まるため、スキャン完了まで待機
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    // APIレスポンスが表示されているか確認
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock10!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    const expectedApiResponse = "Hello, WireMock!";
+
+    // Act
+    // 自動的にスキャンが始まるため、スキャン完了まで待機
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    // APIレスポンスが表示されているか確認
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
       timeout: 10000
     });
   });
