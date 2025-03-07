@@ -242,4 +242,344 @@ test.describe.only("Scan", () => {
       timeout: 10000
     });
   });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock11!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping11.json')  
+    const expectedApiResponse = "Hello, WireMock11!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock12!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping12.json')  
+    const expectedApiResponse = "Hello, WireMock12!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock13!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping13.json')  
+    const expectedApiResponse = "Hello, WireMock13!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock14!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping14.json')  
+    const expectedApiResponse = "Hello, WireMock14!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock15!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping15.json')  
+    const expectedApiResponse = "Hello, WireMock15!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock16!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping16.json')  
+    const expectedApiResponse = "Hello, WireMock16!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock17!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping17.json')  
+    const expectedApiResponse = "Hello, WireMock17!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock18!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping18.json')  
+    const expectedApiResponse = "Hello, WireMock18!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock19!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping19.json')  
+    const expectedApiResponse = "Hello, WireMock19!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock20!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping20.json')  
+    const expectedApiResponse = "Hello, WireMock20!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock21!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping21.json')  
+    const expectedApiResponse = "Hello, WireMock21!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock22!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping22.json')  
+    const expectedApiResponse = "Hello, WireMock22!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock23!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping23.json')  
+    const expectedApiResponse = "Hello, WireMock23!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock24!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping24.json')  
+    const expectedApiResponse = "Hello, WireMock24!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock25!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping25.json')  
+    const expectedApiResponse = "Hello, WireMock25!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock26!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping26.json')  
+    const expectedApiResponse = "Hello, WireMock26!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock27!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping27.json')  
+    const expectedApiResponse = "Hello, WireMock27!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock28!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping28.json')  
+    const expectedApiResponse = "Hello, WireMock28!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock29!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping29.json')  
+    const expectedApiResponse = "Hello, WireMock29!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
+
+  test("QRコードスキャン後にAPIレスポンスにHello, Wiremock30!が表示される", async ({
+    page,
+  }) => {
+    // Arrange
+    await wireMock.mappings.createMappingFromFile('./tests/qrcode/mappings/sample-mapping30.json')  
+    const expectedApiResponse = "Hello, WireMock30!";
+
+    // Act
+    await expect(page.getByText("https://www.google.com")).toBeVisible({ timeout: 30000 });
+
+    // Assert
+    await expect(page.locator('.api-response pre')).toBeVisible();
+    await expect(page.locator('.api-response pre')).toContainText(expectedApiResponse, {
+      timeout: 10000
+    });
+  });
 });

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/example"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "e2e/sample-response11.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+} 
