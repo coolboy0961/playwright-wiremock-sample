@@ -4,4 +4,4 @@ export const PORT_MAPPINGS = {
   2: '8082'
 } as const;
 
-export type WorkerIndex = keyof typeof PORT_MAPPINGS; 
+export type ParallelIndex = keyof typeof PORT_MAPPINGS; 

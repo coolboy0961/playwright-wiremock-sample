@@ -1,14 +1,14 @@
 import { Page } from '@playwright/test';
-import { PORT_MAPPINGS, WorkerIndex } from './port-mappings';
+import { PORT_MAPPINGS, ParallelIndex } from './port-mappings';
 
 export class ApiRouter {
   /**
-   * ワーカー番号に基づいてAPIリクエストをリダイレクトするように設定
+   * パラレル実行のインデックスに基づいてAPIリクエストをリダイレクトするように設定
    * @param page Playwrightのページオブジェクト
-   * @param workerIndex ワーカーのインデックス（1から開始）
+   * @param parallelIndex パラレル実行のインデックス（1から開始）
    */
-  static async setupApiRedirect(page: Page, workerIndex: number): Promise<void> {
-    const targetPort = this.getPortForWorker(workerIndex);
+  static async setupApiRedirect(page: Page, parallelIndex: number): Promise<void> {
+    const targetPort = this.getPortForParallel(parallelIndex);
 
     await page.route('http://localhost:4200/api/**', async route => {
       const url = route.request().url();
@@ -21,16 +21,14 @@ export class ApiRouter {
   }
 
   /**
-   * ワーカー番号に対応するポート番号を取得
-   * @param workerIndex ワーカーのインデックス（1から開始）
+   * パラレル実行のインデックスに対応するポート番号を取得
+   * @param parallelIndex パラレル実行のインデックス（1から開始）
    * @returns ポート番号
    */
-  private static getPortForWorker(workerIndex: number): string {
-    const workerCount = 3; // ワーカー数に合わせて設定
-    const normalizedWorkerIndex = workerIndex % workerCount; // 0, 1, 2 に正規化
-    const port = PORT_MAPPINGS[normalizedWorkerIndex as WorkerIndex];
+  private static getPortForParallel(parallelIndex: number): string {
+    const port = PORT_MAPPINGS[parallelIndex as ParallelIndex];
     if (!port) {
-      throw new Error(`Invalid worker index: ${workerIndex}. Valid indices are: ${Object.keys(PORT_MAPPINGS).join(', ')}`);
+      throw new Error(`Invalid parallel index: ${parallelIndex}. Valid indices are: ${Object.keys(PORT_MAPPINGS).join(', ')}`);
     }
     return port;
   }
