@@ -26,7 +26,9 @@ export class ApiRouter {
    * @returns ポート番号
    */
   private static getPortForWorker(workerIndex: number): string {
-    const port = PORT_MAPPINGS[workerIndex as WorkerIndex];
+    const workerCount = 3; // ワーカー数に合わせて設定
+    const normalizedWorkerIndex = workerIndex % workerCount; // 0, 1, 2 に正規化
+    const port = PORT_MAPPINGS[normalizedWorkerIndex as WorkerIndex];
     if (!port) {
       throw new Error(`Invalid worker index: ${workerIndex}. Valid indices are: ${Object.keys(PORT_MAPPINGS).join(', ')}`);
     }

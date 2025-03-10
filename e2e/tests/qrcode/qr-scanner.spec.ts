@@ -16,18 +16,16 @@ test.use({
   },
 });
 
-test.describe.only("Scan", () => {
+test.describe("Scan", () => {
   const baseUrl = "http://localhost:4200";
   let wireMock: WireMockRestClient;
 
   test.beforeEach(async ({ page }, testInfo) => {
     // ワーカー番号に基づいてAPIリクエストをリダイレクト
-    // testInfo.workerIndexは0から始まるため、+1して1から始まるインデックスに変換
-    const workerIndex = testInfo.workerIndex + 1;
-    await ApiRouter.setupApiRedirect(page, workerIndex);
+    await ApiRouter.setupApiRedirect(page, testInfo.workerIndex);
   
     // WireMockクライアントを生成
-    wireMock = WireMockClientUtil.createClient(workerIndex);
+    wireMock = WireMockClientUtil.createClient(testInfo.workerIndex);
     await wireMock.mappings.resetAllMappings();
     
     const wrapperPage = new WrapperPage(page, baseUrl);

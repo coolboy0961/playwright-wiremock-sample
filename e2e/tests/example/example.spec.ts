@@ -4,12 +4,12 @@ import axios from 'axios';
 
 test('wiremock test', async () => {
   // Arrange
-  const wireMock = new WireMockRestClient('http://localhost:8091');
+  const wireMock = new WireMockRestClient('http://localhost:8080');
   // await wireMock.mappings.createMappingsFromDir('./tests/example/mappings');
   await wireMock.mappings.createMappingFromFile('./tests/example/mappings/sample-mapping.json')
 
   // Act
-  const response = await axios.get('http://localhost:8091/api/example');
+  const response = await axios.get('http://localhost:8080/api/example');
 
   // Assert
   expect(response.status).toBe(200);
