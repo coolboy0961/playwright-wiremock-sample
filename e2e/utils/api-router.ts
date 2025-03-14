@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import { PORT_MAPPINGS, ParallelIndex } from './port-mappings';
+import { getPortForParallel } from './port-mappings';
 
 export class ApiRouter {
   /**
@@ -8,7 +8,7 @@ export class ApiRouter {
    * @param parallelIndex パラレル実行のインデックス（1から開始）
    */
   static async setupApiRedirect(page: Page, parallelIndex: number): Promise<void> {
-    const targetPort = this.getPortForParallel(parallelIndex);
+    const targetPort = getPortForParallel(parallelIndex);
 
     await page.route('http://localhost:4200/api/**', async route => {
       const url = route.request().url();
@@ -18,18 +18,5 @@ export class ApiRouter {
         url: newUrl,
       });
     });
-  }
-
-  /**
-   * パラレル実行のインデックスに対応するポート番号を取得
-   * @param parallelIndex パラレル実行のインデックス（1から開始）
-   * @returns ポート番号
-   */
-  private static getPortForParallel(parallelIndex: number): string {
-    const port = PORT_MAPPINGS[parallelIndex as ParallelIndex];
-    if (!port) {
-      throw new Error(`Invalid parallel index: ${parallelIndex}. Valid indices are: ${Object.keys(PORT_MAPPINGS).join(', ')}`);
-    }
-    return port;
   }
 } 
